@@ -1,0 +1,276 @@
+{
+    "info": {
+        "_postman_id": "72f56e6d-1cf1-4ead-b1f2-332f519351e9",
+        "name": "EzyMetrics",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "35394246"
+    },
+    "item": [
+        {
+            "name": "Leads",
+            "item": [
+                {
+                    "name": "getLeads",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{BASE_URL}}/api/v1/leads",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["api", "v1", "leads"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "addLeads",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{BASE_URL}}/api/v1/leads",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["api", "v1", "leads"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "deleteLeads",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{BASE_URL}}/api/v1/leads",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["api", "v1", "leads"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Campaigns",
+            "item": [
+                {
+                    "name": "getCampaigns",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{BASE_URL}}/api/v1/campaigns",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["api", "v1", "campaigns"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "addCampaigns",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{BASE_URL}}/api/v1/campaigns",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["api", "v1", "campaigns"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "deleteCampaigns",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{BASE_URL}}/api/v1/campaigns",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["api", "v1", "campaigns"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Metrics",
+            "item": [
+                {
+                    "name": "getMetrics",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{BASE_URL}}/api/v1/metrics",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["api", "v1", "metrics"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "addMetrics",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{BASE_URL}}/api/v1/metrics",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["api", "v1", "metrics"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Reports",
+            "item": [
+                {
+                    "name": "getLeadsReports",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [""],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"name\": \"\", // your name\r\n    \"email\": \"\" // valid email\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{BASE_URL}}/api/v1/reports/leads?type=pdf",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["api", "v1", "reports", "leads"],
+                            "query": [
+                                {
+                                    "key": "type",
+                                    "value": "pdf",
+                                    "description": "optional, defaults to 'csv', accepted='csv'|'pdf'"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "getCampaignsReports",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [""],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"name\": \"\", // your name\r\n    \"email\": \"\" // valid email\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{BASE_URL}}/api/v1/reports/campaigns?type=pdf",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["api", "v1", "reports", "campaigns"],
+                            "query": [
+                                {
+                                    "key": "type",
+                                    "value": "pdf",
+                                    "description": "optional, defaults to 'csv', accepted='csv'|'pdf'"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "getMetricsReports",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [""],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"name\": \"\", // your name\r\n    \"email\": \"\" // valid email\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{BASE_URL}}/api/v1/reports/metrics?type=pdf",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["api", "v1", "reports", "metrics"],
+                            "query": [
+                                {
+                                    "key": "type",
+                                    "value": "pdf",
+                                    "description": "optional, defaults to 'csv', accepted='csv'|'pdf'"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [""]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [""]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "BASE_URL",
+            "value": "http://localhost:3001",
+            "type": "string"
+        }
+    ]
+}
